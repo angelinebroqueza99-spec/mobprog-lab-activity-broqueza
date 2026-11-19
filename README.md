@@ -4,7 +4,7 @@
 Installing VS Code, Git, and Flutter was easy. The problems started when I ran my first app. The Android build failed because Gradle could not install the Android NDK, and I also got a Gradle lock error. Flutter then could not delete the build folder because my project was inside OneDrive.
 
 ### 2. Did you encounter any errors when running flutter doctor?
-Yes, it showed two errors. Visual Studio was missing the "Desktop development with C++" part, but I did not need it because I did not build a Windows app. It also said "Android sdkmanager not found" because the Android SDK Command-line Tools were not installed. This was the cause of my NDK error.
+Yes, at first it showed two errors. Visual Studio was missing the "Desktop development with C++" workload, and it said "Android sdkmanager not found" because the Android SDK Command-line Tools were not installed. The sdkmanager error caused my NDK build error. After I fixed them, `flutter doctor -v` showed "No issues found!", as shown in my screenshot.
 
 ### 3. How did you resolve installation, dependency, SDK, or device-related issues?
 I installed the Android SDK Command-line Tools in Android Studio and accepted the licenses with `flutter doctor --android-licenses`. I stopped the Java processes, deleted the `.gradle` folder, and ran `flutter clean` to fix the Gradle lock error. I moved my project from OneDrive to `C:\dev` to fix the build folder error. I also used `cd` to go to my project folder before running commands. Finally, I tested the app in Chrome, and it showed my Hello World message.
