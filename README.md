@@ -1,4 +1,4 @@
-## Laboratory Discussion
+## Lab Activity 0B: Discussion
 
 ### 1. What challenges did you encounter while installing or configuring Flutter?
 Installing VS Code, Git, and Flutter was easy. The problems started when I ran my first app. The Android build failed because Gradle could not install the Android NDK, and I also got a Gradle lock error. Flutter then could not delete the build folder because my project was inside OneDrive.
